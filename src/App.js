@@ -9,7 +9,7 @@ import ProductsDisplay from './Components/ProductsDisplay/ProductsDisplay';
 
 function App() {
   const [data, setData] = useState("");
-  
+  let recData = "";
 
   useEffect(() => {
     // console.log(prods)
@@ -17,20 +17,26 @@ function App() {
     console.log(typeof (data))
     console.log(Object.values(data));
     if(!localStorage.getItem("recData")) {
-      const recData = JSON.stringify(recDataJson);
+      recData = JSON.stringify(recDataJson);
       console.log(recData);
       localStorage.setItem("recData", recData);
+    }
+    else {
+      recData = localStorage.getItem("recData");
     }
   }, [data])
 
   let voiceRecog = () => {
     axios.get("http://127.0.0.1:5000/", {
       params: {
-        recData: JSON.stringify(recDataJson)
+        recData: recData
       }
     })
       .then(res => {
-        setData(res.data);
+        setData(res.data[0]);
+        console.log("The new receieved data is");
+        console.log(JSON.stringify(res.data[1]));
+        localStorage.setItem("recData", JSON.stringify(res.data[1]));
       })
   }
   return (
