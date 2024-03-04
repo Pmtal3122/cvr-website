@@ -27,6 +27,8 @@ function App() {
   }, [data])
 
   let voiceRecog = () => {
+    const button = document.querySelector('button');
+    button.classList.add("loading");
     axios.get("http://127.0.0.1:5000/", {
       params: {
         recData: recData
@@ -37,13 +39,22 @@ function App() {
         console.log("The new receieved data is");
         console.log(JSON.stringify(res.data[1]));
         localStorage.setItem("recData", JSON.stringify(res.data[1]));
+        button.classList.remove("loading");
       })
   }
   return (
     <div id='bodyDiv'>
       <ProductsDisplay />
       <div id="recogButton">
-        <button onClick={voiceRecog}>RECOMMEND PRODUCTS</button>
+        <button onClick={voiceRecog}>
+          <span className='button-text'>RECOMMEND PRODUCTS</span>
+
+          <div className="button-loader">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </button>
       </div>
       <div id="displayRecommended">
         {Object.values(data).map(ele => (

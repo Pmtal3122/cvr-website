@@ -1,5 +1,5 @@
 {
-    "Backpacks": {
+    "backpacks": {
       "suitcase": 1,
       "pack": 1,
       "rucksack": 1,
@@ -8,7 +8,7 @@
       "lot": 4,
       "luggage": 4
     },
-    "Sneakers": {
+    "sneakers": {
       "footwear": 1,
       "shoe": 1,
       "grip": 1,
@@ -34,7 +34,7 @@
       "lot": 2,
       "luggage": 2
     },
-    "Dress": {
+    "dress": {
       "party": 1,
       "top": 1,
       "gown": 1,
@@ -56,7 +56,7 @@
       "lot": 3,
       "luggage": 3
     },
-    "Sunglasses": {
+    "sunglasses": {
       "glass": 1,
       "goggles": 1,
       "frame": 1,
@@ -70,7 +70,7 @@
       "life": 1,
       "aspirations": 1
     },
-    "Hat": {
+    "hat": {
       "cap": 1,
       "cowboy": 1,
       "sun": 1,
@@ -98,7 +98,7 @@
       "luggage": 2,
       "lot": 2
     },
-    "Gloves": {
+    "gloves": {
       "winter": 1,
       "cold": 1,
       "sweater": 1,
@@ -113,7 +113,7 @@
       "travel": 1,
       "location": 1
     },
-    "T-Shirts": {
+    "t-shirts": {
       "casual": 1,
       "top": 1,
       "shirt": 1,
@@ -126,7 +126,7 @@
       "pant": 1,
       "loose": 1
     },
-    "Jeans": {
+    "jeans": {
       "pant": 1,
       "denim": 1,
       "ripped": 1,
@@ -141,7 +141,7 @@
       "lot": 1,
       "luggage": 1
     },
-    "Watch": {
+    "watch": {
       "time": 1,
       "gold": 1,
       "titanium": 1,
@@ -166,7 +166,7 @@
       "travel": 1,
       "location": 1
     },
-    "Belt": {
+    "belt": {
       "pant": 1,
       "hold": 1,
       "loose": 1,
