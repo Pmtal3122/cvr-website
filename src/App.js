@@ -9,6 +9,7 @@ import ProductsDisplay from './Components/ProductsDisplay/ProductsDisplay';
 
 function App() {
   const [data, setData] = useState("");
+  const [impWords, setImpWords] = useState([]);
   let recData = "";
   let selectedImgs = [];
 
@@ -17,7 +18,7 @@ function App() {
     // console.log(data);
     // console.log(typeof (data))
     // console.log(Object.values(data));
-    if(!localStorage.getItem("recData")) {
+    if (!localStorage.getItem("recData")) {
       recData = JSON.stringify(recDataJson);
       console.log(recData);
       localStorage.setItem("recData", recData);
@@ -28,10 +29,11 @@ function App() {
     }
   }, [data])
 
-  let voiceRecog =  () => {
+  let voiceRecog = () => {
     const button = document.querySelector('button');
     const selectedButton = document.querySelector('.enterSelected');
     button.classList.add("loading");
+    recData = localStorage.getItem("recData");
     axios.get("http://127.0.0.1:5000/", {
       params: {
         recData: recData
@@ -40,18 +42,19 @@ function App() {
       .then(res => {
         setData(res.data[0]);
         console.log("The new receieved data is");
-        console.log(JSON.stringify(res.data[1]));
+        console.log(res.data[1]);
+        setImpWords(res.data[1]);
         // localStorage.setItem("recData", JSON.stringify(res.data[1]));
-        button.classList.remove("loading");
-
+        button.style.display = "none";
 
         selectedButton.style.display = "flex";
       })
   }
 
   const toggleSelected = (event) => {
+    event.preventDefault();
     const img = event.target;
-    if(img.classList.contains("selected")) {
+    if (img.classList.contains("selected")) {
       img.classList.remove("selected");
       // selectedImgs.pop(Number(img.id));
       selectedImgs.splice(selectedImgs.indexOf(Number(img.id)), 1);
@@ -59,10 +62,47 @@ function App() {
     else {
       img.classList.add("selected");
       selectedImgs.push(Number(img.id))
-      console.log(typeof(selectedImgs));
+      console.log(typeof (selectedImgs));
     }
     console.log(selectedImgs);
   }
+
+  function addProducts() {
+    const enterSelected = document.querySelector('.enterSelected');
+    const button = document.querySelector('button');
+    enterSelected.style.display = "none";
+    setData("");
+    if (selectedImgs.length === 0) return;
+
+    recDataJson = JSON.parse(recData);
+    console.log("recdata after json parse")
+    console.log(typeof (recDataJson));
+    console.log(recDataJson);
+    for (let i = 0; i < selectedImgs.length; i++) {
+      // selectedImgs[i] : selected image index
+      // prods[selectedImgs[i]] : selected image name
+      // recDataJson[prods[selectedImgs[i]]] : object of keywords for selected image
+      console.log(recDataJson[prods[selectedImgs[i]]]);
+
+      for (let j = 0; j < impWords.length; j++) {
+        // If word already exists
+        if (Object.keys(recDataJson[prods[selectedImgs[i]]]).indexOf(impWords[j]) != -1 ) {
+          recDataJson[prods[selectedImgs[i]]][impWords[j]]++;
+        }
+        // If word does not exist
+        else {
+          recDataJson[prods[selectedImgs[i]]][impWords[j]] = 1;
+        }
+      }
+
+      recData = JSON.stringify(recDataJson);
+      localStorage.setItem("recData", recData);
+
+      button.style.display = "flex";
+      button.classList.remove("loading");
+    }
+  }
+
   return (
     <div id='bodyDiv'>
       <ProductsDisplay />
@@ -86,7 +126,7 @@ function App() {
         ))}
       </div>
       <div className="enterSelected">
-        <button className="enterSelectedButton">
+        <button onClick={addProducts} className="enterSelectedButton">
           <span className="enterSelectedText">ENTER THE SELECTED PRODUCTS</span>
         </button>
       </div>

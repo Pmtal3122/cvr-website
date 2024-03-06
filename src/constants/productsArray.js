@@ -13,7 +13,7 @@ import img9 from '../images/9_Belt.jpg'
 class productsArray extends Component{
     constructor(props){
         super(props);
-        this.prods = ["Backpacks", "Sneakers", "Dress", "Sunglasses", "Hat", "Gloves", "T-Shirts", "Jeans", "Watch", "Belt"]
+        this.prods = ["backpacks", "sneakers", "dress", "sunglasses", "hat", "gloves", "t-shirts", "jeans", "watch", "belt"]
         this.prodImages = [img0, img1, img2, img3, img4, img5, img6, img7, img8, img9];
     }
 }
