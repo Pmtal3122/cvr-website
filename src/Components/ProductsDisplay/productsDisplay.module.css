@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Imbue:opsz,wght@10..100,100..900&display=swap');
+
 #productsCatalogue {
     display: flex;
     flex-direction: column;  
@@ -21,10 +24,13 @@
     display: none;
 }
 
-#productImages {
+.productImages {
     display: flex;
     /* justify-content: space-around; */
     column-gap: 50px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 #productDetails {
@@ -36,28 +42,58 @@
 
 #imgName {
     /* height: 500px; */
-    width: 300px;
+    width: 250px;
 }
 
-img {
-    width: 300px;
-    height: 180px;
-    margin: 0;
-    padding: 0;
-    box-shadow: 0px 0px 10px rgb(215, 215, 215);
+#imgName::before {
+    content: '';
+    width: 250px;
+    height: 150px;
+    background-color: black;
+    position: absolute;
+    z-index: 1;
     border-radius: 10px;
+    opacity: 0;
     transition: 0.25s;
 }
 
-img:hover {
+img {
+    width: 250px;
+    height: 150px;
+    margin: 0;
+    padding: 0;
+    /* box-shadow: 0px 0px 10px rgb(215, 215, 215); */
+    border-radius: 10px;
+    transform: scale(1);
+    transition: 0.25s;
+    background-color: black;
+}
+
+/* img:hover {
     box-shadow: 0px 0px 10px black;
+    transform: scale(1.05);
+} */
+
+#imgName:hover::before {
+    opacity: 0.3;
+    transform: scale(1.05);
+}
+
+#imgName:hover img {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px green;
 }
 
 #prodName {
     /* border: 1px solid red; */
-    min-width: 300px;
+    min-width: 250px;
     text-align: center;
     font-size: 18px;
+    transition: 0.25s;
+    font-family: "Crimson Text", serif;
+    /* font-family: "Imbue", serif; */
+    font-weight: 400;
+    /* opacity: 0; */
 }
 
 #rightArrow {

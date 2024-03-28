@@ -14,10 +14,6 @@ function App() {
   let selectedImgs = [];
 
   useEffect(() => {
-    // console.log(prods)
-    // console.log(data);
-    // console.log(typeof (data))
-    // console.log(Object.values(data));
     if (!localStorage.getItem("recData")) {
       recData = JSON.stringify(recDataJson);
       console.log(recData);
