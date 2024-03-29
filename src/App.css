@@ -37,6 +37,9 @@
   }
 } */
 
+@import url('https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Imbue:opsz,wght@10..100,100..900&display=swap');
+
 :root {
   --background-light: rgb(150, 148, 193);
   --background-dark: black;
@@ -48,6 +51,7 @@
   min-height: 100vh;
   overflow: hidden;
   background-color: white;
+  transition: background-color 0.25s ease-in-out;
   /* background-color: var(--background-light); */
 }
 
@@ -87,6 +91,10 @@ button {
   margin-top: 20px;
   padding: 0px 40px;
   box-shadow: 0px 0px 10px rgb(150, 148, 193);
+  font-family: "Crimson Text", serif;
+  font-weight: 900;
+  word-spacing: 10px;
+  /* font-family: "Imbue", serif; */
   /* width: 100%; */
 }
 
