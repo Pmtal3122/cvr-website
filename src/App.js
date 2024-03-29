@@ -5,6 +5,7 @@ import '../src/constants/products.json'
 import recDataJson from './constants/recommenderData.json'
 import { prods, prodImages } from './constants/productsArray';
 import ProductsDisplay from './Components/ProductsDisplay/ProductsDisplay';
+import Header from './Components/Header/Header';
 // import { prodImages } from './constants/productsImages';
 
 function App() {
@@ -103,6 +104,7 @@ function App() {
 
   return (
     <div id='bodyDiv'>
+      <Header />
       <ProductsDisplay />
       <div id="recogButton">
         <button onClick={voiceRecog}>

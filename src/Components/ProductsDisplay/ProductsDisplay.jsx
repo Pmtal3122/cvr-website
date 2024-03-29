@@ -4,9 +4,11 @@ import { prodImages, prods } from '../../constants/productsArray'
 import styles from './productsDisplay.module.css'
 // import rightArrowSvg from '../../images/right-arrow-svgrepo-com.svg'
 // import { ReactSVG } from 'react'
+import gsap from 'gsap';
 
 function ProductsDisplay() {
     const [hoveredIndex, setHoveredIndex] = useState(null);
+    
     return (
         <>
             <div id={styles.productsCatalogue}>
