@@ -10,7 +10,7 @@
 }
 
 #headerText {
-    animation: 0.25s forwards ease-in-out headerInit;
+    animation: 0.5s forwards ease-in-out headerInit;
 }
 
 @keyframes headerInit {
