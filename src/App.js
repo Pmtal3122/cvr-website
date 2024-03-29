@@ -28,6 +28,7 @@ function App() {
   let voiceRecog = () => {
     const button = document.querySelector('button');
     const selectedButton = document.querySelector('.enterSelected');
+    const bodyDiv = document.querySelector('#bodyDiv');
     button.classList.add("loading");
     recData = localStorage.getItem("recData");
     axios.get("http://127.0.0.1:5000/", {
@@ -42,7 +43,7 @@ function App() {
         setImpWords(res.data[1]);
         // localStorage.setItem("recData", JSON.stringify(res.data[1]));
         button.style.display = "none";
-
+        bodyDiv.style.background = "rgb(150, 148, 193)";
         selectedButton.style.display = "flex";
       })
   }
@@ -66,8 +67,12 @@ function App() {
   function addProducts() {
     const enterSelected = document.querySelector('.enterSelected');
     const button = document.querySelector('button');
+    const bodyDiv = document.querySelector('#bodyDiv');
     enterSelected.style.display = "none";
     setData("");
+    bodyDiv.style.background = "white";
+    button.style.display = "flex";
+      button.classList.remove("loading");
     if (selectedImgs.length === 0) return;
 
     recDataJson = JSON.parse(recData);
@@ -93,9 +98,6 @@ function App() {
 
       recData = JSON.stringify(recDataJson);
       localStorage.setItem("recData", recData);
-
-      button.style.display = "flex";
-      button.classList.remove("loading");
     }
   }
 

@@ -9,15 +9,18 @@
     width: 100vw;
     overflow: scroll;
     box-sizing: border-box;
-    padding-top: 25px;
+    padding-top: 15px;
     padding-bottom: 30px;
     padding-left: 50px;
     padding-right: 50px;
     /* background: linear-gradient(rgb(215, 215, 215), white); */
-    background: rgb(215, 215, 215);
+    /* background: rgb(215, 215, 215); */
+    /* background: rgb(183, 11, 11); */
+    background-color: #190061;
     position: sticky;
     top: 0;
     margin: 0;
+    box-shadow: 0px 0px 15px #0C0032;
 }
 
 #productsCatalogue::-webkit-scrollbar {
@@ -55,6 +58,7 @@
     border-radius: 10px;
     opacity: 0;
     transition: 0.25s;
+    /* border: 2px solid #190061; */
 }
 
 img {
@@ -75,25 +79,29 @@ img {
 } */
 
 #imgName:hover::before {
-    opacity: 0.3;
+    opacity: 0.7;
     transform: scale(1.05);
+    /* border: 2px solid #282828; */
 }
 
 #imgName:hover img {
     transform: scale(1.05);
-    box-shadow: 0px 0px 20px green;
+    /* box-shadow: 0px 0px 20px green; */
 }
 
 #prodName {
     /* border: 1px solid red; */
     min-width: 250px;
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     transition: 0.25s;
     font-family: "Crimson Text", serif;
     /* font-family: "Imbue", serif; */
-    font-weight: 400;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 1.3px;
     /* opacity: 0; */
+    color: white;
 }
 
 #rightArrow {
