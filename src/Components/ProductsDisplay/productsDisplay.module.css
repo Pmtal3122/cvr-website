@@ -105,33 +105,48 @@ img {
     color: rgb(150, 148, 193);
 }
 
-#rightArrow {
+#rightArrow, #leftArrow {
     position: fixed;
-    right: 0;
-    top: 20px;
+    top: 22px;
     min-width: 50px;
-    /* min-height: 100%; */
     display: flex;
-    /* background: linear-gradient(to right, rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.34)); */
     background: rgba(0, 0, 0, 0.34);
     transition: background 0.5s ease;
 }
 
-#rightArrow:hover {
+#rightArrow {
+    right: 0;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+#leftArrow {
+    left: 0;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#rightArrow:hover, #leftArrow:hover {
     background: rgba(0, 0, 0, 0.54);
     cursor: pointer;
 }
 
-#rightArrowSvg {
+#rightArrowSvg, #leftArrowSvg {
     width: 40px;
     height: 100%;
     position: absolute;
-    right: 5px;
     color: white;
+}
+#rightArrowSvg {
+    right: 5px;
     transition: right 0.25s;
 }
+#leftArrowSvg {
+    left: 5px;
+    transition: left 0.25s;
+}
 
-#rightArrowSvgPath {
+#rightArrowSvgPath, #leftArrowSvgPath {
     fill: white;
     transition: 0.25s fill;
 }
@@ -140,6 +155,13 @@ img {
     right: 0;
 }
 #rightArrow:hover #rightArrowSvgPath {
+    fill: rgb(150, 148, 193);
+}
+
+#leftArrow:hover #leftArrowSvg {
+    left: 0;
+}
+#leftArrow:hover #leftArrowSvgPath {
     fill: rgb(150, 148, 193);
 }
 
