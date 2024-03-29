@@ -98,6 +98,10 @@ button {
   /* width: 100%; */
 }
 
+#recommendButton {
+  margin-top: 170px;
+}
+
 button:hover {
   border: 2px solid #190061;
   background-color: #190061;
@@ -167,11 +171,11 @@ button.loading .button-loader {
 }
 
 .selected {
-  border: 2px solid green;
+  border: 2px solid #3500D3;
   opacity: 1;
 }
 .selected:hover {
-  box-shadow: 0px 0px 30px green;
+  box-shadow: 0px 0px 30px #3500D3;
 }
 
 .enterSelected {

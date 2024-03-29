@@ -116,7 +116,7 @@ function App() {
       <Header />
       <ProductsDisplay />
       <div id="recogButton">
-        <button onClick={voiceRecog} ref={recommendButton}>
+        <button id='recommendButton' onClick={voiceRecog} ref={recommendButton}>
           <span className='button-text'>RECOMMEND PRODUCTS</span>
 
           <div className="button-loader">
