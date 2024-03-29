@@ -132,7 +132,7 @@ button:hover {
   height: 1rem;
   width: 1rem;
   border-radius: 50%;
-  background-color: black;
+  background-color: #3500D3;
   animation: 1.2s infinite ease-in-out loader;
 }
 .button-loader div:nth-child(1) {
@@ -178,11 +178,26 @@ button.loading .button-loader {
   display: none;
 }
 
+button {
+  animation: 1s forwards ease-in-out buttonInitial;
+}
+
 @keyframes loader {
   0%, 80%, 100% {
     transform: scale(0);
   }
   40% {
     transform: scale(1);
+  }
+}
+
+@keyframes buttonInitial {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

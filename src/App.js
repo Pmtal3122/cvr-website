@@ -1,11 +1,12 @@
 import './App.css';
 import axios from 'axios'
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import '../src/constants/products.json'
 import recDataJson from './constants/recommenderData.json'
 import { prods, prodImages } from './constants/productsArray';
 import ProductsDisplay from './Components/ProductsDisplay/ProductsDisplay';
 import Header from './Components/Header/Header';
+import gsap from 'gsap';
 // import { prodImages } from './constants/productsImages';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
   const [impWords, setImpWords] = useState([]);
   let recData = "";
   let selectedImgs = [];
+  const recommendButton = useRef();
 
   useEffect(() => {
     if (!localStorage.getItem("recData")) {
@@ -24,6 +26,13 @@ function App() {
       recData = localStorage.getItem("recData");
       console.log(recData);
     }
+
+    // gsap.from(recommendButton.current, {
+    //   y: 50,
+    //   duration: 1,
+    //   opacity: 0
+    // })
+
   }, [data])
 
   let voiceRecog = () => {
@@ -73,7 +82,7 @@ function App() {
     setData("");
     bodyDiv.style.background = "white";
     button.style.display = "flex";
-      button.classList.remove("loading");
+    button.classList.remove("loading");
     if (selectedImgs.length === 0) return;
 
     recDataJson = JSON.parse(recData);
@@ -88,7 +97,7 @@ function App() {
 
       for (let j = 0; j < impWords.length; j++) {
         // If word already exists
-        if (Object.keys(recDataJson[prods[selectedImgs[i]]]).indexOf(impWords[j]) != -1 ) {
+        if (Object.keys(recDataJson[prods[selectedImgs[i]]]).indexOf(impWords[j]) !== -1) {
           recDataJson[prods[selectedImgs[i]]][impWords[j]]++;
         }
         // If word does not exist
@@ -107,7 +116,7 @@ function App() {
       <Header />
       <ProductsDisplay />
       <div id="recogButton">
-        <button onClick={voiceRecog}>
+        <button onClick={voiceRecog} ref={recommendButton}>
           <span className='button-text'>RECOMMEND PRODUCTS</span>
 
           <div className="button-loader">

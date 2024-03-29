@@ -8,3 +8,18 @@
     color: white;
     z-index: 2;
 }
+
+#headerText {
+    animation: 0.25s forwards ease-in-out headerInit;
+}
+
+@keyframes headerInit {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

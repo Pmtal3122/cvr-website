@@ -71,6 +71,7 @@ img {
     transform: scale(1);
     transition: 0.25s;
     background-color: black;
+    /* animation: 1s forwards load; */
 }
 
 /* img:hover {
@@ -118,4 +119,13 @@ img {
 
 #rightArrow:hover {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.54));
+}
+
+@keyframes load {
+    0% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }

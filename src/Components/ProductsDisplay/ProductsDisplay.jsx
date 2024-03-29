@@ -1,14 +1,25 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { prodImages, prods } from '../../constants/productsArray'
 // import { prods } from '../../constants/productsArray'
 import styles from './productsDisplay.module.css'
-// import rightArrowSvg from '../../images/right-arrow-svgrepo-com.svg'
-// import { ReactSVG } from 'react'
+import rightArrowSvg from '../../images/right-arrow-svgrepo-com.svg'
+import { ReactSVG } from 'react'
 import gsap from 'gsap';
 
 function ProductsDisplay() {
     const [hoveredIndex, setHoveredIndex] = useState(null);
+    const imagesRef = useRef([]);
     
+    useEffect(() => {
+        imagesRef.current.forEach((image, index) => {
+            gsap.from(image, {
+                y: -50,
+                duration: 1,
+                delay: index * 0.1,
+                opacity: 0
+            });
+        });
+    }, [])
     return (
         <>
             <div id={styles.productsCatalogue}>
@@ -24,7 +35,7 @@ function ProductsDisplay() {
                 <div className={styles.productImages}>
                     {prodImages.map((ele, index) => (
                         <div key={index} id={styles.imgName} 
-                        style={{  }}
+                        ref={el => imagesRef.current[index] = el}
                         onMouseEnter={() => setHoveredIndex(index)} onMouseLeave={() => setHoveredIndex(null)}>
                             <img src={ele} alt="" />
                         </div>
