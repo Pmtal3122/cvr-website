@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/cvr-website/static/css/main.9d04e617.css",
+    "main.js": "/cvr-website/static/js/main.c43bd1cb.js",
+    "static/js/453.94c59716.chunk.js": "/cvr-website/static/js/453.94c59716.chunk.js",
+    "static/media/7_Jeans.jpeg": "/cvr-website/static/media/7_Jeans.befde394f9681225db16.jpeg",
+    "static/media/5_Gloves.jpg": "/cvr-website/static/media/5_Gloves.0100e58f18d2f568f3c1.jpg",
+    "static/media/8_Watch.jpg": "/cvr-website/static/media/8_Watch.d33ff876f9c4bcb0bd03.jpg",
+    "static/media/1_Sneakers.jpg": "/cvr-website/static/media/1_Sneakers.9061ba0f94f1a00b395e.jpg",
+    "static/media/3_Sunglasses.jpg": "/cvr-website/static/media/3_Sunglasses.2d7e38bb44735383c17e.jpg",
+    "static/media/0_Backpack.jpg": "/cvr-website/static/media/0_Backpack.bb43bec561e7564b1162.jpg",
+    "static/media/2_Dress.jpg": "/cvr-website/static/media/2_Dress.097082890d27a949d5e0.jpg",
+    "static/media/9_Belt.jpg": "/cvr-website/static/media/9_Belt.feaa2e559078f39b0c59.jpg",
+    "static/media/4_Hat.jpg": "/cvr-website/static/media/4_Hat.ec8bd8950457dcf9f8c2.jpg",
+    "static/media/6_Tshirt.jpg.webp": "/cvr-website/static/media/6_Tshirt.jpg.a68a79ce10165c69fba4.webp",
+    "index.html": "/cvr-website/index.html",
+    "main.9d04e617.css.map": "/cvr-website/static/css/main.9d04e617.css.map",
+    "main.c43bd1cb.js.map": "/cvr-website/static/js/main.c43bd1cb.js.map",
+    "453.94c59716.chunk.js.map": "/cvr-website/static/js/453.94c59716.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9d04e617.css",
+    "static/js/main.c43bd1cb.js"
+  ]
+}
