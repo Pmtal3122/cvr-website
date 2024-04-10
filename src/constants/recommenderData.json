@@ -5,34 +5,15 @@
       "rucksack": 1,
       "knapsack": 1,
       "handbag": 1,
-      "lot": 4,
-      "luggage": 4
+      "luggage": 1
     },
     "sneakers": {
       "footwear": 1,
       "shoe": 1,
-      "grip": 1,
       "walk": 1,
-      "jogging": 1,
+      "jog": 1,
       "gym": 1,
-      "challenge": 1,
-      "students": 1,
-      "city": 1,
-      "group": 1,
-      "college": 1,
-      "swim": 1,
-      "risk": 1,
-      "virus": 1,
-      "care": 1,
-      "news": 1,
-      "center": 1,
-      "patients": 1,
-      "sunny": 1,
-      "travel": 1,
-      "location": 1,
-      "baggy": 1,
-      "lot": 2,
-      "luggage": 2
+      "travel": 1
     },
     "dress": {
       "party": 1,
@@ -42,19 +23,7 @@
       "wear": 1,
       "outfit": 1,
       "formal": 1,
-      "sadness": 1,
-      "life": 1,
-      "aspirations": 1,
-      "college": 1,
-      "group": 1,
-      "students": 1,
-      "kansas": 1,
-      "challenge": 1,
-      "city": 1,
-      "swim": 1,
-      "risk": 1,
-      "lot": 3,
-      "luggage": 3
+      "swim": 1
     },
     "sunglasses": {
       "glass": 1,
@@ -65,38 +34,14 @@
       "sun": 1,
       "heat": 1,
       "glare": 1,
-      "water": 1,
-      "sadness": 1,
-      "life": 1,
-      "aspirations": 1
+      "water": 1
     },
     "hat": {
       "cap": 1,
-      "cowboy": 1,
       "sun": 1,
       "heat": 1,
       "cover": 1,
-      "trip": 1,
-      "glass": 1,
-      "water": 1,
-      "sadness": 1,
-      "life": 1,
-      "aspirations": 1,
-      "college": 1,
-      "group": 1,
-      "students": 1,
-      "kansas": 1,
-      "challenge": 1,
-      "city": 1,
-      "swim": 1,
-      "risk": 1,
-      "virus": 1,
-      "care": 1,
-      "news": 1,
-      "center": 1,
-      "patients": 1,
-      "luggage": 2,
-      "lot": 2
+      "trip": 1
     },
     "gloves": {
       "winter": 1,
@@ -107,11 +52,7 @@
       "woollen": 1,
       "mountain": 1,
       "himalayas": 1,
-      "water": 1,
-      "glass": 1,
-      "sunny": 1,
-      "travel": 1,
-      "location": 1
+      "travel": 1
     },
     "t-shirts": {
       "casual": 1,
@@ -120,11 +61,7 @@
       "tees": 1,
       "topwear": 1,
       "fit": 1,
-      "baggy": 1,
-      "travel": 1,
-      "location": 1,
-      "pant": 1,
-      "loose": 1
+      "baggy": 1
     },
     "jeans": {
       "pant": 1,
@@ -134,12 +71,8 @@
       "fit": 1,
       "blue": 1,
       "black": 1,
-      "travel": 1,
-      "location": 1,
       "baggy": 1,
-      "loose": 1,
-      "lot": 1,
-      "luggage": 1
+      "loose": 1
     },
     "watch": {
       "time": 1,
@@ -148,23 +81,7 @@
       "analog": 1,
       "digital": 1,
       "smart": 1,
-      "cell": 1,
-      "college": 1,
-      "group": 1,
-      "students": 1,
-      "kansas": 1,
-      "challenge": 1,
-      "city": 1,
-      "swim": 1,
-      "risk": 1,
-      "virus": 1,
-      "care": 1,
-      "news": 1,
-      "center": 1,
-      "patients": 1,
-      "sunny": 1,
-      "travel": 1,
-      "location": 1
+      "cell": 1
     },
     "belt": {
       "pant": 1,
