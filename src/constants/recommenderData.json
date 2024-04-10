@@ -172,5 +172,54 @@
       "loose": 1,
       "leather": 1,
       "holes": 1
+    },
+    "laptop": {
+      "electronic": 1,
+      "windows": 1,
+      "apple": 1,
+      "processor": 1,
+      "gaming": 1,
+      "coding": 1
+    },
+    "mobile": {
+      "electronic": 1,
+      "display": 1,
+      "camera": 1,
+      "application": 1,
+      "processor": 1,
+      "gaming": 1,
+      "screen": 1
+    },
+    "book": {
+      "fiction": 1,
+      "story": 1,
+      "paperback": 1,
+      "read": 1,
+      "history": 1,
+      "politics": 1,
+      "poem": 1,
+      "novel": 1
+    },
+    "sports": {
+      "cricket": 1,
+      "football": 1,
+      "basketball": 1,
+      "badminton": 1,
+      "ball": 1,
+      "bat": 1,
+      "pad": 1,
+      "helmet": 1,
+      "stumps": 1,
+      "racket":1
+    },
+    "gaming": {
+      "console": 1,
+      "action": 1,
+      "adventure": 1,
+      "puzzle": 1,
+      "play": 1,
+      "joystick": 1,
+      "controller": 1,
+      "shooting": 1
     }
   }
