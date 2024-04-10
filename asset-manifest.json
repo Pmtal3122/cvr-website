@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cvr-website/static/css/main.9d04e617.css",
-    "main.js": "/cvr-website/static/js/main.9dec88b9.js",
+    "main.js": "/cvr-website/static/js/main.1361b650.js",
     "static/js/453.94c59716.chunk.js": "/cvr-website/static/js/453.94c59716.chunk.js",
     "static/media/7_Jeans.jpeg": "/cvr-website/static/media/7_Jeans.befde394f9681225db16.jpeg",
     "static/media/5_Gloves.jpg": "/cvr-website/static/media/5_Gloves.0100e58f18d2f568f3c1.jpg",
@@ -19,11 +19,11 @@
     "static/media/6_Tshirt.jpg.webp": "/cvr-website/static/media/6_Tshirt.jpg.a68a79ce10165c69fba4.webp",
     "index.html": "/cvr-website/index.html",
     "main.9d04e617.css.map": "/cvr-website/static/css/main.9d04e617.css.map",
-    "main.9dec88b9.js.map": "/cvr-website/static/js/main.9dec88b9.js.map",
+    "main.1361b650.js.map": "/cvr-website/static/js/main.1361b650.js.map",
     "453.94c59716.chunk.js.map": "/cvr-website/static/js/453.94c59716.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9d04e617.css",
-    "static/js/main.9dec88b9.js"
+    "static/js/main.1361b650.js"
   ]
 }
